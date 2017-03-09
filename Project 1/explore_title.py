@@ -1,6 +1,7 @@
 import MySQLdb
 import pandas as pd
 import numpy as np
+import json
 
 db = MySQLdb.connect(host="localhost",  # your host, usually localhost
                      user="root",       # your username
@@ -18,30 +19,21 @@ cur.execute("SELECT * FROM aka_title LIMIT 100")
 
 db.close()
 
-json = {}
 
 data = []
 for row in cur.fetchall():
-	data.append(list(row))
+	temp_json = {}
+	for i in range(len(index)):
+		if index[i] == 'md5sum':
+			continue
 
-data = np.array(data)
+		if type(row[i]) == type(None):
+			temp_json[index[i]] = 0
+		elif type(row[i]) == type(5L):
+			temp_json[index[i]] = int(row[i])
+		else:
+			temp_json[index[i]] = row[i]
+	data.append(temp_json)
 
-"""
-	for j in range (len(index)):
-		data[index[j]].append(row[j])
-	i += 1
-	if i == 1000:
-		break
-    #data.append(list(row))
-"""
-"""
-df = pd.DataFrame(data)
-df.set_index(index)
-"""
-
+data = json.dumps(data, encoding='latin1')
 print data
-
-for i in range(len(index)):
-	json[index[i]] = data[:, i]
- 
-print json
