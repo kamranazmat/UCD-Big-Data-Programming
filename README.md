@@ -10,3 +10,4 @@
 - making all 'null' value as 0 (even if it is a string)
 
 - using mongoDB compass to get better visualisation of the database
+- all the tables have 'id' as primary key, so this can be made '_id'

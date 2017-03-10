@@ -1,0 +1,1 @@
+[{"kind": "distributors", "id": 1}, {"kind": "miscellaneous companies", "id": 4}, {"kind": "production companies", "id": 2}, {"kind": "special effects companies", "id": 3}]
