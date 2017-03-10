@@ -11,3 +11,6 @@
 
 - using mongoDB compass to get better visualisation of the database
 - all the tables have 'id' as primary key, so this can be made '_id'
+
+- the current script failed, it took around 4-5 hours just to loop around 2 tables
+- next I will try to run one by one for each table

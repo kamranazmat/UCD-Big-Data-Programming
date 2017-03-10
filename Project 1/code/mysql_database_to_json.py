@@ -28,7 +28,8 @@ for table in tables:
 	for row in cur.fetchall():
 	    index.append(str(row[0]))
 	
-	query = "SELECT * FROM " + str(table) + " LIMIT 100"
+	# query = "SELECT * FROM " + str(table) + " LIMIT 100"
+	query = "SELECT * FROM " + str(table)
 	cur.execute(query)
 
 	data = []
