@@ -17,8 +17,7 @@
 
 import os
 
-print os.getcwd()
-os.makedirs('directory')
+
 
 import datetime
 a = datetime.datetime.now()
@@ -26,3 +25,8 @@ print "loading ....."
 b = datetime.datetime.now()
 
 print "Time:", (b - a)
+i = 0
+
+while i < 57153103:
+	print i
+	i += 100000
