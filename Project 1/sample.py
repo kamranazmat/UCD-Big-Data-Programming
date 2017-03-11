@@ -19,3 +19,10 @@ import os
 
 print os.getcwd()
 os.makedirs('directory')
+
+import datetime
+a = datetime.datetime.now()
+print "loading ....."
+b = datetime.datetime.now()
+
+print "Time:", (b - a)
