@@ -14,3 +14,14 @@
 
 - the current script failed, it took around 4-5 hours just to loop around 2 tables
 - next I will try to run one by one for each table
+
+Report: 11th March 2017
+- SHOW VARIABLES LIKE 'connect_timeout'; --- it was 30 secs, I changed it to 240 secs
+- then it started working (error: connection timeout problem !!)
+- I tried to access the MySQL database and then retrived one table at a time. Then, I looped around all the row in the table and also inserted it to the MongoDB database at the same time. This was effective from previous attempt.
+
+- table 'movie_info' took 23:22:07715 minutes to transfer data from MySQL database to MongoDB
+- similarly, 'movie_company' took 37:12:689009 minutes
+
+- 'cast_info' is left and this is the largest database, this may take upto 2-3 hours
+- screenshot added 'mongoDB.png', showing the current status of MongoDB (using MongoDB Compass)
