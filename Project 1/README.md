@@ -1,16 +1,14 @@
-This project has four main objectives: to make you install and use a relational data
-base (PostgresSQL or MySQL), to make you write programs using database connectors
-(e.g., JDBC), to make you install and use a NoSQL database (e.g., MongoDB), and
-finally we want you to design and run some performance tests on two different database
-systems: relational and NoSQL (e.g., document-based).
+This project has four main objectives: to make you install and use a relational data base (PostgresSQL or MySQL), to make you write programs using database connectors (e.g., JDBC), to make you install and use a NoSQL database (e.g., MongoDB), and finally we want you to design and run some performance tests on two different database systems: relational and NoSQL (e.g., document-based).
 
-- mysql and connection done using python 
+Report: 7th March 2017
+- mysql and connection done using python (7th)
 - faced problem during json.dumps, then enoded to 'latin-1' 
 - tried inserting data to mongodb, successful !!!
 
 - next automating the script
 
-- i can make the primary key of a table as '_id' in mongodb but the problem will arise when there are more than one column as primary key
+Report: 9th March 2017
+- I can make the primary key of a table as '_id' in mongodb but the problem will arise when there are more than one column as primary key
 - making all 'null' value as 0 (even if it is a string)
 
 - using mongoDB compass to get better visualisation of the database
