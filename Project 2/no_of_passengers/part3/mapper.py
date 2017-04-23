@@ -7,8 +7,7 @@ import sys
 
 reader = csv.reader(sys.stdin, delimiter='\t')
 
-# average number of passengers per day of the week
-# days = {"Sunday": 0, "Monday": 0, "Tuesday": 0, "Wednesday": 0, "Thursday": 0, "Friday": 0, "Saturday": 0}
+# average number of passengers per month
 
 for line in reader:
     data = line[0].strip().split(",")
