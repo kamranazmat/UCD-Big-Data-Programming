@@ -10,6 +10,8 @@ weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 for line in reader:
     data = line[0].strip().split(",")
+    if len(line) != 1:
+        continue
     try:
         pick_up_time = datetime.datetime.strptime(data[1], "%Y-%m-%d %H:%M:%S")
         day = pick_up_time.strftime("%A")
