@@ -10,7 +10,7 @@ oldKey = None
 for line in sys.stdin:
     thisKey, val = line.strip().split("\t")
     if oldKey and oldKey != thisKey:
-        print oldKey, "\t", int(round(passenger_count/trip_count))
+        print oldKey, "\t", passenger_count/float(trip_count)
         oldKey = thisKey
         passenger_count = 0
         trip_count = 0
@@ -20,4 +20,4 @@ for line in sys.stdin:
     passenger_count += int(val)
 
 if oldKey != None:
-    print oldKey, "\t", int(round(passenger_count/trip_count))
+    print oldKey, "\t", passenger_count/float(trip_count)
