@@ -11,7 +11,7 @@ reader = csv.reader(sys.stdin, delimiter='\t')
 for line in reader:
     data = line[0].strip().split(",")
     try:
-        count = int(data[3])
+        count = float(data[4])
         print count
     except:
         continue

@@ -6,14 +6,14 @@ import csv
 import sys
 
 reader = csv.reader(sys.stdin, delimiter='\t')
-
-# average number of passengers per day of the week
-# days = {"Sunday": 0, "Monday": 0, "Tuesday": 0, "Wednesday": 0, "Thursday": 0, "Friday": 0, "Saturday": 0}
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 for line in reader:
     data = line[0].strip().split(",")
     try:
         pick_up_time = datetime.datetime.strptime(data[1], "%Y-%m-%d %H:%M:%S")
-        print pick_up_time.strftime("%A"), "\t", data[3]
+        day = pick_up_time.strftime("%A")
+        if day in weekdays:
+            print "{0}{1}\t{2}".format(pick_up_time.strftime("%-I"), pick_up_time.strftime("%p"), data[3])
     except:
         continue
