@@ -11,4 +11,5 @@ for line in sys.stdin:
     passenger_count += int(thisKey)
     trip_count += 1
 
-print int(round(passenger_count/trip_count))
+# print passenger_count, trip_count
+print passenger_count/float(trip_count)
